@@ -11,6 +11,7 @@ namespace ModelLib.model
         private int _id;
         private String _name;
         private String _address;
+        private int _faciliteterId;
 
         // HUSK ALTID EN DEFAULT konstruktør til JSON
         public Hotel()
@@ -40,6 +41,12 @@ namespace ModelLib.model
         {
             get => _address;
             set => _address = value;
+        }
+
+        public int FaciliteterID
+        {
+            get { return _faciliteterId; }
+            set { _faciliteterId = value; }
         }
 
         public override string ToString()

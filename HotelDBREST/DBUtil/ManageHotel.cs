@@ -17,7 +17,7 @@ namespace HotelDBREST.DBUtil
         private const String DELETE = "delete from DemoHotel WHERE Hotel_No = @ID";
         private const String INSERT = "insert into DemoHotel values (@ID, @Name, @Address)";
         private const String UPDATE = "update DemoHotel " +
-                                      "SET Hotel_no = @HotelId, Name = @Name, Address = @Address " +
+                                      "SET Hotel_no = @HotelId, Name = @Name, Address = @Address, Facilitet_Id = @FacilitetID  " +
                                       "WHERE Hotel_No = @ID";
 
 
@@ -77,6 +77,7 @@ namespace HotelDBREST.DBUtil
             cmd.Parameters.AddWithValue("@ID", hotel.Id);
             cmd.Parameters.AddWithValue("@Name", hotel.Name);
             cmd.Parameters.AddWithValue("@Address", hotel.Address);
+            cmd.Parameters.AddWithValue("@FacilitetID", hotel.FaciliteterID);
 
             int rowsAffected;
             try
@@ -99,6 +100,7 @@ namespace HotelDBREST.DBUtil
             cmd.Parameters.AddWithValue("@HotelId", hotel.Id);
             cmd.Parameters.AddWithValue("@Name", hotel.Name);
             cmd.Parameters.AddWithValue("@Address", hotel.Address);
+            cmd.Parameters.AddWithValue("@FacilitetID", hotel.FaciliteterID);
 
             int rowsAffected = cmd.ExecuteNonQuery();
 

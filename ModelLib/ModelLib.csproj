@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\Booking.cs" />
+    <Compile Include="model\Facilitet.cs" />
     <Compile Include="model\Guest.cs" />
     <Compile Include="model\Hotel.cs" />
     <Compile Include="model\Room.cs" />
