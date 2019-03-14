@@ -27,5 +27,12 @@ namespace ModelLib.model
             get { return facilitetnr; }
             set { facilitetnr = value; }
         }
+        public override string ToString()
+
+        {
+
+            return $"{nameof(Facilitetnr)}: {Facilitetnr}, {nameof(Name)}: {Name}";
+
+        }
     }
 }
